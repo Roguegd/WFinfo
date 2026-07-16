@@ -7,7 +7,7 @@
     xmlns:local="clr-namespace:WFInfo"
     x:Class="WFInfo.RelicsWindow"
     d:DataContext="{d:DesignInstance Type=local:RelicsViewModel}"
-    Title="Relics" Height="400" Width="550" WindowStyle="None" AllowsTransparency="True" ResizeMode="CanResizeWithGrip" MinHeight="200" Loaded="WindowLoaded">
+    Title="遗物" Height="400" Width="550" WindowStyle="None" AllowsTransparency="True" ResizeMode="CanResizeWithGrip" MinHeight="200" Loaded="WindowLoaded">
     <Window.Resources>
 
         <BooleanToVisibilityConverter x:Key="BoolToVisibilityConverter" />
@@ -36,7 +36,7 @@
                        Style="{StaticResource Label_Button}"
                        VerticalContentAlignment="Stretch"
                        DockPanel.Dock="Right" />
-                <TextBlock Text="Relics"
+                <TextBlock Text="遗物"
                            VerticalAlignment="Center"
                            FontSize="16"
                            FontFamily="{StaticResource Roboto_Black}"
@@ -50,22 +50,22 @@
                 <Button Command="{Binding ExpandAllCommand}"
                         Content="＋"
                         FontSize="15"
-                        ToolTip="Expand All Levels"
+                        ToolTip="展开所有等级"
                         Style="{StaticResource Button_Button}"
                         Height="21"
                         VerticalAlignment="Top"
                         DockPanel.Dock="Left" />
-                <Button Command="{Binding CollapseAllCommand}" Content="－" FontSize="15" ToolTip="Collapse All Levels"
+                <Button Command="{Binding CollapseAllCommand}" Content="－" FontSize="15" ToolTip="折叠所有等级"
                         Style="{StaticResource Button_Button}" Height="21" VerticalAlignment="Top"
                         DockPanel.Dock="Left" />
-                <CheckBox Content="Hide Vaulted" ToolTip="Show vaulted items."
+                <CheckBox Content="隐藏入库" ToolTip="显示已入库物品。"
                           Margin="10 0"
                           IsChecked="{Binding HideVaulted}" VerticalAlignment="Center"
 
                           BorderThickness="1"
                           BorderBrush="#FF646464"
                           DockPanel.Dock="Left" />
-                <Label Content="Filter:" Padding="5 0"
+                <Label Content="筛选：" Padding="5 0"
                        VerticalContentAlignment="Center"
 
                        BorderThickness="1 0 0 0"
@@ -80,7 +80,7 @@
                         SelectionBrush="#FF7EB4EA"
 
                         BorderBrush="#FF646464" BorderThickness="1" />
-                    <TextBlock MinWidth="50" Text="Filter terms"
+                    <TextBlock MinWidth="50" Text="筛选条件"
                                Foreground="#FF646464"
                                Visibility="{Binding Path=IsFilterEmpty, Converter={StaticResource BoolToVisibilityConverter}}"
                                IsHitTestVisible="False"
@@ -129,7 +129,7 @@
                 </ToggleButton.Style>
             </ToggleButton>
 
-            <Label Content="Sort by:" Padding="5 0" VerticalContentAlignment="Center" FontSize="12"
+            <Label Content="排序：" Padding="5 0" VerticalContentAlignment="Center" FontSize="12"
                    Background="{x:Null}" HorizontalAlignment="Left"
                    BorderBrush="#FF646464" BorderThickness="1"
                    DockPanel.Dock="Left" />
@@ -165,10 +165,10 @@
                               Style="{DynamicResource ComboBoxStyle1}"
                               SelectedIndex="{Binding SortBoxSelectedIndex}"
                               ItemContainerStyle="{DynamicResource ComboBoxItemStyle1}">
-                        <ComboBoxItem IsSelected="True" Content="Name" />
-                        <ComboBoxItem Content="Average intact plat" />
-                        <ComboBoxItem Content="Average radiant plat" />
-                        <ComboBoxItem Content="Difference (radiant-intact)" />
+                        <ComboBoxItem IsSelected="True" Content="名称" />
+                        <ComboBoxItem Content="平均未开白金" />
+                        <ComboBoxItem Content="平均光辉白金" />
+                        <ComboBoxItem Content="差值（光辉-未开）" />
 
                     </ComboBox>
                 </Border>
@@ -214,9 +214,9 @@
 
                             <Grid Grid.Column="1" Margin="5,0,5,0">
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="自动" />
                                     <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="自动" />
                                 </Grid.ColumnDefinitions>
 
                                 <TextBlock HorizontalAlignment="Left" Grid.Column="0" Text="{Binding Col1_Text1}"
@@ -229,10 +229,10 @@
 
                             <Grid Grid.Column="2" Margin="5,0,5,0">
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="自动" />
                                     <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="自动" />
+                                    <ColumnDefinition Width="自动" />
                                 </Grid.ColumnDefinitions>
 
                                 <TextBlock HorizontalAlignment="Left" Grid.Column="0" Text="{Binding Col2_Text1}"

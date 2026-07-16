@@ -121,11 +121,11 @@
                 <ControlTemplate TargetType="{x:Type TreeViewItem}">
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition MinWidth="19" Width="Auto" />
+                            <ColumnDefinition MinWidth="19" Width="自动" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="自动" />
                             <RowDefinition />
                         </Grid.RowDefinitions>
 
@@ -142,14 +142,14 @@
                         <MultiTrigger>
                             <MultiTrigger.Conditions>
                                 <Condition Property="HasHeader" Value="false" />
-                                <Condition Property="Width" Value="Auto" />
+                                <Condition Property="Width" Value="自动" />
                             </MultiTrigger.Conditions>
                             <Setter TargetName="PART_Header" Property="MinWidth" Value="75" />
                         </MultiTrigger>
                         <MultiTrigger>
                             <MultiTrigger.Conditions>
                                 <Condition Property="HasHeader" Value="false" />
-                                <Condition Property="Height" Value="Auto" />
+                                <Condition Property="Height" Value="自动" />
                             </MultiTrigger.Conditions>
                             <Setter TargetName="PART_Header" Property="MinHeight" Value="19" />
                         </MultiTrigger>

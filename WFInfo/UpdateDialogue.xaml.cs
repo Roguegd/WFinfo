@@ -29,8 +29,8 @@ namespace WFInfo
                 return;
             version = version.Substring(0, version.LastIndexOf("."));
 
-            NewVersionText.Text = "WFInfo version " + version + " has been released!";
-            OldVersionText.Text = "You have version " + Main.BuildVersion + " installed.";
+            NewVersionText.Text = "WFInfo " + version + " 已发布！";
+            OldVersionText.Text = "您已安装 " + Main.BuildVersion + " 版本。";
 
             WebClient = CustomEntrypoint.CreateNewWebClient();
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;

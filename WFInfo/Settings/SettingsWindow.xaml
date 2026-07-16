@@ -8,7 +8,7 @@
         xmlns:components="clr-namespace:WFInfo.Components"
         xmlns:screenshot="clr-namespace:WFInfo.Services.Screenshot"
         mc:Ignorable="d"
-        Title="Settings"
+        Title="设置"
         MaxWidth="334"
         MinWidth="334"
         Width="334"
@@ -108,10 +108,10 @@
         </Grid.Resources>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="自动" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
+            <RowDefinition Height="自动" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Grid VerticalAlignment="Top"
@@ -133,7 +133,7 @@
                        Style="{StaticResource Label_Button}"
                        VerticalContentAlignment="Stretch"
                        DockPanel.Dock="Right" />
-                <TextBlock Text="Settings"
+                <TextBlock Text="设置"
                            VerticalAlignment="Center"
                            FontSize="16"
                            FontFamily="{StaticResource Roboto_Black}"
@@ -149,14 +149,14 @@
                         <Grid DockPanel.Dock="Bottom"
                               HorizontalAlignment="Stretch">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="自动" />
                                 <ColumnDefinition />
-                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="自动" />
                             </Grid.ColumnDefinitions>
                             <RadioButton x:Name="WindowRadio"
                                          Grid.Column="1"
-                                         Content="Window"
-                                         ToolTip="Display rewards in a separate window"
+                                         Content="窗口"
+                                         ToolTip="在独立窗口中显示奖励"
                                          VerticalContentAlignment="Center"
                                          Checked="WindowChecked"
                                          Background="#FFB1D0D9"
@@ -164,22 +164,22 @@
                                          HorizontalAlignment="Center" />
                             <RadioButton x:Name="OverlayRadio"
                                          Grid.Column="2"
-                                         Content="Overlay"
-                                         ToolTip="Display rewards on top of Warframe"
+                                         Content="覆盖"
+                                         ToolTip="在 Warframe 上方显示奖励"
                                          VerticalContentAlignment="Center"
                                          Checked="OverlayChecked"
                                          Background="#FFB1D0D9"
                                          BorderBrush="#FF0F0F0F" />
                             <RadioButton x:Name="LightRadio"
                                          Grid.Column="0"
-                                         Content="Light"
-                                         ToolTip="Do not display any window at all"
+                                         Content="灯光"
+                                         ToolTip="不显示任何窗口"
                                          VerticalContentAlignment="Center"
                                          Checked="LightRadioChecked"
                                          Background="#FFB1D0D9"
                                          BorderBrush="#FF0F0F0F" />
                         </Grid>
-                        <Label Content="Rewards display"
+                        <Label Content="奖励显示"
                                DockPanel.Dock="Top"
                                HorizontalAlignment="Center"
                                FontFamily="{StaticResource Roboto}"
@@ -189,19 +189,19 @@
                 <Border DockPanel.Dock="Top"
                         Padding="15 5 25 5">
                     <UniformGrid>
-                        <Label Content="Display time" />
+                        <Label Content="显示时间" />
                         <TextBox x:Name="Displaytime_number_box"
-                                 ToolTip="The time in milliseconds the overlays will be displayed on screen"
+                                 ToolTip="覆盖层在屏幕上显示的毫秒数"
                                  Text="{Binding SettingsViewModel.Delay, Mode=TwoWay}"
                                  components:NumericOnlyEntry.RegexFilter="^[0-9\.,]+$" />
 
                         <CheckBox x:Name="HighlightCheckbox"
-                                  Content="Highlight"
-                                  ToolTip="Highlight the best rewards on the overlay."
+                                  Content="高亮"
+                                  ToolTip="在覆盖层上高亮最佳奖励。"
                                   IsChecked="{Binding SettingsViewModel.HighlightRewards, Mode=TwoWay}" />
                         <CheckBox x:Name="HighContrastCheckbox"
-                                  Content="High contrast"
-                                  ToolTip="Enable High contrast for the overlay."
+                                  Content="高对比度"
+                                  ToolTip="为覆盖层启用高对比度。"
                                   IsChecked="{Binding SettingsViewModel.HighContrast, Mode=TwoWay}" />
                     </UniformGrid>
                 </Border>
@@ -209,7 +209,7 @@
                         DockPanel.Dock="Top"
                         Padding="15 5 25 5">
                     <DockPanel LastChildFill="False">
-                        <Label Content="Overlay Offset"
+                        <Label Content="覆盖偏移"
                                DockPanel.Dock="Top"
                                HorizontalAlignment="Center"
                                FontFamily="{StaticResource Roboto}"
@@ -220,10 +220,10 @@
                                    DockPanel.Dock="Left"
                                    HorizontalContentAlignment="Center"
                                    Width="32"
-                                   ToolTip="The X Offset of the overlay. Positive values shift the overlay to the right." />
+                                   ToolTip="覆盖层的 X 偏移。正值向右偏移。" />
                             <TextBox x:Name="OverlayXOffset_number_box"
                                      DockPanel.Dock="Left"
-                                     ToolTip="The X Offset of the overlay. Positive values shift the overlay to the right."
+                                     ToolTip="覆盖层的 X 偏移。正值向右偏移。"
                                      TextWrapping="Wrap"
                                      Text="{Binding SettingsViewModel.OverlayXOffsetValue, Mode=TwoWay}"
                                      components:NumericOnlyEntry.RegexFilter="^-?[0-9]*$"
@@ -231,7 +231,7 @@
 
                             <TextBox x:Name="OverlayYOffset_number_box"
                                      DockPanel.Dock="Right"
-                                     ToolTip="The Y Offset of the overlay. Positive values shift the overlay towards the top."
+                                     ToolTip="覆盖层的 Y 偏移。正值向上偏移。"
                                      Width="90"
                                      Text="{Binding SettingsViewModel.OverlayYOffsetValue, Mode=TwoWay
                              , Converter={StaticResource NegateIntConverter}}"
@@ -240,23 +240,23 @@
                                    DockPanel.Dock="Right"
                                    HorizontalContentAlignment="Center"
                                    Width="32"
-                                   ToolTip="The Y Offset of the overlay. Positive values shift the overlay towards the top." />
+                                   ToolTip="覆盖层的 Y 偏移。正值向上偏移。" />
                         </DockPanel>
                     </DockPanel>
                 </Border>
                 <Border DockPanel.Dock="Top" 
                         Padding="15 5 25 5">
                     <UniformGrid>
-                        <Label Content="Min Width (snap)"/>
+                        <Label Content="最小宽度（截图）"/>
                         <TextBox x:Name="MinOverlayWidth_number_box"
-                                 ToolTip="The minimum width in pixels snap-it overlays will be displayed on screen"
+                                 ToolTip="截图覆盖层在屏幕上显示的最小像素宽度"
                                  Text="{Binding SettingsViewModel.MinOverlayWidth, Mode=TwoWay}"
                                  components:NumericOnlyEntry.RegexFilter="^[0-9\.,]+$"
                                  VerticalAlignment="Top" />
 
-                        <Label Content="Max Width (snap)"/>
+                        <Label Content="最大宽度（截图）"/>
                         <TextBox x:Name="MaxOverlayWidth_number_box"
-                                 ToolTip="The maximum width in pixels snap-it overlays will be displayed on screen"
+                                 ToolTip="截图覆盖层在屏幕上显示的最大像素宽度"
                                  Text="{Binding SettingsViewModel.MaxOverlayWidth, Mode=TwoWay}"
                                  components:NumericOnlyEntry.RegexFilter="^[0-9\.,]+$"
                                  VerticalAlignment="Top" />
@@ -266,21 +266,21 @@
                 <Border DockPanel.Dock="Top" 
                         Padding="15 5 25 5">
                     <UniformGrid>
-                        <Label Content="Display time (snap)"/>
+                        <Label Content="显示时间（截图）"/>
                         <TextBox x:Name="SnapItDisplaytime_number_box"
-                                 ToolTip="The time in milliseconds the overlays will be displayed on screen"
+                                 ToolTip="覆盖层在屏幕上显示的毫秒数"
                                  Text="{Binding SettingsViewModel.SnapItDelay, Mode=TwoWay}"
                                  components:NumericOnlyEntry.RegexFilter="^[0-9\.,]+$"
                                  VerticalAlignment="Top" />
 
                         <CheckBox x:Name="SnapItemCountCheckbox"
-                                  Content="Count Item"
-                                  ToolTip="Scan for item amount using Snap-It"
+                                  Content="计数物品"
+                                  ToolTip="使用截图扫描物品数量"
                                   IsChecked="{Binding SettingsViewModel.DoSnapItCount, Mode=TwoWay}" />
 
                         <CheckBox x:Name="SnapItThreadCheckbox"
-                                  Content="Multithread Snap"
-                                  ToolTip="Speed up snap-it using multithreading"
+                                  Content="多线程截图"
+                                  ToolTip="使用多线程加速截图"
                                   IsChecked="{Binding SettingsViewModel.SnapMultiThreaded, Mode=TwoWay}" />
 
                     </UniformGrid>
@@ -298,14 +298,14 @@
                             <RowDefinition />
                             <RowDefinition />
                         </Grid.RowDefinitions>
-                        <Label Content="Activation key"
+                        <Label Content="激活键"
                                Grid.Row="0"
                                Grid.Column="0" />
                         <TextBox x:Name="Activation_key_box"
                                  Style="{StaticResource KeyBindTextboxStyle}"
                                  Grid.Row="0"
                                  Grid.Column="1"
-                                 ToolTip="Key to activate the processing. Use modifiers below to achieve other actions"
+                                 ToolTip="激活处理的按键。使用下方修饰键实现其他功能"
                                  Text="{Binding SettingsViewModel.ActivationKeyDisplay, Mode=OneWay}"
                                  IsReadOnly="True"
                                  KeyUp="ActivationUp"
@@ -322,40 +322,40 @@
                                    Width="1"
                                    RenderTransformOrigin="0.5,0.5"
                                    d:IsHidden="True" />
-                        <Label Content="Search it modifier"
+                        <Label Content="搜索修饰键"
                                Grid.Row="1"
                                Grid.Column="0" />
                         <TextBox x:Name="Searchit_key_box"
                                  Style="{StaticResource KeyBindTextboxStyle}"
                                  Grid.Row="1"
                                  Grid.Column="1"
-                                 ToolTip="Modifier to hold down to start search it"
+                                 ToolTip="按住开始搜索的修饰键"
                                  IsReadOnly="True"
                                  KeyUp="Searchit_key_box_KeyUp"
                                  Text="{Binding SettingsViewModel.SearchItModifierKey,
                                 Converter={StaticResource KeyStringConverter}}"
                                  VerticalAlignment="Top" />
-                        <Label Content="Snap it modifier"
+                        <Label Content="截图修饰键"
                                Grid.Row="2"
                                Grid.Column="0" />
                         <TextBox x:Name="Snapit_key_box"
                                  Style="{StaticResource KeyBindTextboxStyle}"
                                  Grid.Row="2"
                                  Grid.Column="1"
-                                 ToolTip="Modifier to hold down to start Snap it"
+                                 ToolTip="按住开始截图的修饰键"
                                  Text="{Binding SettingsViewModel.SnapitModifierKey,
                                 Converter={StaticResource KeyStringConverter}}"
                                  KeyUp="Snapit_key_box_KeyUp"
                                  IsReadOnly="True"
                                  VerticalAlignment="Top" />
-                        <Label Content="Master it modifier"
+                        <Label Content="精通修饰键"
                                Grid.Row="3"
                                Grid.Column="0" />
                         <TextBox x:Name="Masterit_key_box"
                                  Style="{StaticResource KeyBindTextboxStyle}"
                                  Grid.Row="3"
                                  Grid.Column="1"
-                                 ToolTip="Modifier to hold down to start Master it"
+                                 ToolTip="按住开始精通的修饰键"
                                  Text="{Binding SettingsViewModel.MasterItModifierKey,
                                 Converter={StaticResource KeyStringConverter}}"
                                  IsReadOnly="True"
@@ -367,15 +367,15 @@
                         Width="334"
                         Padding="15 5 25 5">
                     <UniformGrid>
-                        <Label Content="Efficiency min" />
-                        <Label Content="Efficiency max" />
-                        <TextBox ToolTip="Anything below this efficiency will be marked as red in snapit"
+                        <Label Content="最低效率" />
+                        <Label Content="最高效率" />
+                        <TextBox ToolTip="低于此效率的值在截图中标记为红色"
                                  Margin="0, 0, 20, 0"
                                  Text="{Binding SettingsViewModel.MinimumEfficiencyValue, Mode=TwoWay}"
                                  components:NumericOnlyEntry.RegexFilter="^[0-9\.,]+$"
                                  AutoWordSelection="True"
                                  VerticalAlignment="Top" />
-                        <TextBox ToolTip="Anything above this efficiency will be marked as green in snapit"
+                        <TextBox ToolTip="高于此效率的值在截图中标记为绿色"
                                  Text="{Binding SettingsViewModel.MaximumEfficiencyValue, Mode=TwoWay}"
                                  components:NumericOnlyEntry.RegexFilter="^[0-9\.,]+$"
                                  Margin="0, 0, 20, 0"
@@ -395,8 +395,8 @@
                                 <ColumnDefinition/>
                                 <ColumnDefinition Width="6*"/>
                             </Grid.ColumnDefinitions>
-                            <Label Content="Theme" Grid.Column="0"/>
-                            <Label x:Name="ConfigureTheme_button" Grid.Column="1" MouseLeftButtonDown="ConfigureTheme_button_MouseLeftButtonDown" ToolTip="Configure Custom Theme" Margin="0,5,10,5" Padding="3"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="20" VerticalAlignment="Top" HorizontalAlignment="Right" Width="20">
+                            <Label Content="主题" Grid.Column="0"/>
+                            <Label x:Name="ConfigureTheme_button" Grid.Column="1" MouseLeftButtonDown="ConfigureTheme_button_MouseLeftButtonDown" ToolTip="配置自定义主题" Margin="0,5,10,5" Padding="3"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="20" VerticalAlignment="Top" HorizontalAlignment="Right" Width="20">
                                 <Label.Style>
                                     <Style>
                                         <Setter Property="ContentControl.Content">
@@ -474,7 +474,7 @@
                         <Label MouseLeftButtonDown="ClickCreateDebug"
                                Padding="5"
                                DockPanel.Dock="Right"
-                               Content="Create debug zip"
+                               Content="创建调试压缩包"
                                FontWeight="Regular"
                                Style="{StaticResource Label_Button}" />
                         <Border Style="{StaticResource NestedBorder}"
@@ -482,7 +482,7 @@
                             <UniformGrid DockPanel.Dock="Top"
                                          Rows="1">
 
-                                <Label Content="Locale"
+                                <Label Content="语言"
                                        DockPanel.Dock="Left"
                                        FontSize="16"
                                        FontWeight="Regular" />
@@ -560,8 +560,8 @@
                         <Border DockPanel.Dock="Top"
                                 Style="{StaticResource NestedBorder}">
                             <CheckBox x:Name="clipboardCheckbox"
-                                      Content="Clipboard"
-                                      ToolTip="Copy the results from the OCR over to the clipboard for easy pasting into chat"
+                                      Content="剪贴板"
+                                      ToolTip="将 OCR 结果复制到剪贴板，方便粘贴到聊天中"
                                       IsChecked="{Binding SettingsViewModel.Clipboard, Mode=TwoWay}" />
                         </Border>
                         <Border DockPanel.Dock="Top"
@@ -569,20 +569,20 @@
                             <UniformGrid Rows="2">
 
                                 <CheckBox x:Name="autoCheckbox"
-                                          Content="Auto"
-                                          ToolTip="Automatically detects when the relic screen is visible."
+                                          Content="自动"
+                                          ToolTip="自动检测遗物屏幕是否可见。"
                                           Click="AutoClicked" />
                                 <CheckBox x:Name="Autolist"
-                                          Content="Auto List"
-                                          ToolTip="Spawns a listing dialogue whenever the end of mission is detected, requires auto"
+                                          Content="自动列表"
+                                          ToolTip="检测到任务结束时弹出列表对话框，需要启用自动"
                                           IsChecked="{Binding SettingsViewModel.AutoList, Mode=TwoWay}" />
                                 <CheckBox x:Name="Autocsv"
-                                          Content="Auto CSV"
-                                          ToolTip="Save reward options and choice to CSV file in application directory (%appdata%/WFInfo%)"
+                                          Content="自动 CSV"
+                                          ToolTip="将奖励选项和选择保存到应用目录下的 CSV 文件（%appdata%/WFInfo%）"
                                           IsChecked="{Binding SettingsViewModel.AutoCSV, Mode=TwoWay}" />
                                 <CheckBox x:Name="Autoadd"
-                                          Content="Auto Add"
-                                          ToolTip="Spawns a dialogue for increasing owned item count whenever the end of mission is detected, requires auto"
+                                          Content="自动添加"
+                                          ToolTip="检测到任务结束时弹出增加拥有物品数量的对话框，需要启用自动"
                                           IsChecked="{Binding SettingsViewModel.AutoCount, Mode=TwoWay}" />
                             </UniformGrid>
                         </Border>

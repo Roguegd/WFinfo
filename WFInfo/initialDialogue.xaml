@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WFInfo"
         mc:Ignorable="d"
-        Title="WFInfo Installation" Height="90" Width="300" BorderBrush="#FF707070" WindowStyle="None" ResizeMode="NoResize">
+        Title="WFInfo 安装" Height="90" Width="300" BorderBrush="#FF707070" WindowStyle="None" ResizeMode="NoResize">
     <Window.Resources>
         <Style TargetType="{x:Type FrameworkElement}" x:Key="baseStyle">
             <Setter Property="TextElement.Foreground" Value="#FFB1D0D9"/>
@@ -13,7 +13,7 @@
         </Style>
         <Style TargetType="CheckBox" BasedOn="{StaticResource baseStyle}"/>
         <Style TargetType="RadioButton" BasedOn="{StaticResource baseStyle}"/>
-        <Style TargetType="Label" BasedOn="{StaticResource baseStyle}"/>
+        <Style TargetType="标签" BasedOn="{StaticResource baseStyle}"/>
         <Style TargetType="TextBox" BasedOn="{StaticResource baseStyle}"/>
         <Style TargetType="TextBlock" BasedOn="{StaticResource baseStyle}"/>
         <Style TargetType="ToolTip" BasedOn="{StaticResource baseStyle}">
@@ -24,7 +24,7 @@
 
         <Rectangle Stroke="#FF707070"/>
         <Rectangle HorizontalAlignment="Left" Height="26" Stroke="#FF646464" VerticalAlignment="Top" Width="300" Fill="#FF0F0F0F"/>
-        <Label x:Name="errorText" Content="Installing Required Files" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="0,22,0,0" Width="298" FontSize="18"/>
+        <Label x:Name="errorText" Content="正在安装所需文件" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="0,22,0,0" Width="298" FontSize="18"/>
         <TextBlock Margin="0,51,0,0" TextWrapping="Wrap" Text="Only happens with initial setup and major updates&#x0a;This will take a moment or two..." TextAlignment="Center"/>
         <TextBlock Text="WFInfo" Margin="34,4,0,0" HorizontalAlignment="Left" FontSize="16" FontFamily="/WFInfo;component/Resources/Roboto/#Roboto Black" FontWeight="Bold"/>
         <Image Margin="2,0,0,0" Source="Resources/WFLogo.png" Height="24" VerticalAlignment="Top" HorizontalAlignment="Left" Width="23" >
@@ -39,7 +39,7 @@
         </Image>
         <Label x:Name="exit" MouseLeftButtonDown="Exit" Content="x" Margin="271,0,0,64">
             <Label.Style>
-                <Style  TargetType="Label">
+                <Style  TargetType="标签">
                     <Setter Property="Background" Value="Transparent"/>
                     <Setter Property="FontSize" Value="16"/>
                     <Setter Property="Foreground" Value="#FFB1D0D9"/>

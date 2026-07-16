@@ -67,9 +67,9 @@ namespace WFInfo.Resources
 
         private void Processed()
         {
-            TextBox.Text = "Review submited, thank you";
+            TextBox.Text = "评价已提交，感谢您！";
             TextBox.IsEnabled = false;
-            postReview.Content = "Thank you!";
+            postReview.Content = "感谢！";
             postReview.IsEnabled = false;
         }
 

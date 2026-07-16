@@ -7,7 +7,7 @@
         xmlns:settings="clr-namespace:WFInfo.Settings"
         xmlns:components="clr-namespace:WFInfo.Components"
         mc:Ignorable="d"
-        Title="Theme Adjuster"
+        Title="主题调整器"
         Width="800"
         Height="634"
         BorderBrush="#FF707070"
@@ -98,10 +98,10 @@
         </Grid.Resources>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="自动" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
+            <RowDefinition Height="自动" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Grid VerticalAlignment="Top"
@@ -123,7 +123,7 @@
                        Style="{StaticResource Label_Button}"
                        VerticalContentAlignment="Stretch"
                        DockPanel.Dock="Right" />
-                <TextBlock Text="Theme Adjuster"
+                <TextBlock Text="主题调整器"
                            VerticalAlignment="Center"
                            FontSize="16"
                            FontFamily="{StaticResource Roboto_Black}"
@@ -142,19 +142,19 @@
                         <RowDefinition Height="60"/>
                     </Grid.RowDefinitions>
                     <Image Margin="0,0" Grid.Row="0" x:Name="previewImage"></Image>
-                    <TextBlock Margin="5" Grid.Row="1" TextWrapping="Wrap" Text="Adjust and apply filter(s) until item names are black. Try to reduce how much else is black, especially near the text"></TextBlock>
+                    <TextBlock Margin="5" Grid.Row="1" TextWrapping="Wrap" Text="调整并应用滤镜，直到物品名称为黑色。尽量减少其他区域的黑色，尤其是文字附近"></TextBlock>
                 </Grid>
             </Border>
             <ScrollViewer Grid.Column="1">
                 <Border Padding="0">
                 <StackPanel>
-                    <CheckBox Content="Primary HSL Filter"
+                    <CheckBox Content="主要 HSL 滤镜"
                                   ToolTip="Use(and reveal) primary filter based on HSL colour values" Margin="5,5"
                                   IsChecked="{Binding SettingsViewModel.CF_usePrimaryHSL, Mode=TwoWay}" />
                     <Border>
                         <StackPanel  Visibility="{Binding Path=SettingsViewModel.CF_usePrimaryHSL, Converter={StaticResource BoolToVis}}">
 
-                            <Label Content="Primary Hue Max"></Label>
+                            <Label Content="主要色相最大值"></Label>
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="3*"/>
@@ -165,7 +165,7 @@
                                      VerticalAlignment="Top" />
                                 <Slider Grid.Column="1" Minimum="0" Maximum="360" Margin="10,10" VerticalAlignment="Center" Value="{Binding SettingsViewModel.CF_pHueMax, Mode=TwoWay, Delay=200, UpdateSourceTrigger=PropertyChanged}"></Slider>
                             </Grid>
-                            <Label Content="Primary Hue Min"></Label>
+                            <Label Content="主要色相最小值"></Label>
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="3*"/>
@@ -176,7 +176,7 @@
                                      VerticalAlignment="Top" />
                                 <Slider Grid.Column="1" Minimum="0" Maximum="360" Margin="10,10" VerticalAlignment="Center" Value="{Binding SettingsViewModel.CF_pHueMin, Mode=TwoWay, Delay=200, UpdateSourceTrigger=PropertyChanged}"></Slider>
                             </Grid>
-                            <Label Content="Primary Saturation Max"></Label>
+                            <Label Content="主要饱和度最大值"></Label>
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="3*"/>
@@ -187,7 +187,7 @@
                                      VerticalAlignment="Top" />
                                 <Slider Grid.Column="1" Minimum="0" Maximum="1" Margin="10,10" VerticalAlignment="Center" Value="{Binding SettingsViewModel.CF_pSatMax, Mode=TwoWay, Delay=200, UpdateSourceTrigger=PropertyChanged}"></Slider>
                             </Grid>
-                            <Label Content="Primary Saturation Min"></Label>
+                            <Label Content="主要饱和度最小值"></Label>
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="3*"/>
@@ -198,7 +198,7 @@
                                      VerticalAlignment="Top" />
                                 <Slider Grid.Column="1" Minimum="0" Maximum="1" Margin="10,10" VerticalAlignment="Center" Value="{Binding SettingsViewModel.CF_pSatMin, Mode=TwoWay, Delay=200, UpdateSourceTrigger=PropertyChanged}"></Slider>
                             </Grid>
-                            <Label Content="Primary Brightness Max"></Label>
+                            <Label Content="主要亮度最大值"></Label>
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="3*"/>
@@ -209,7 +209,7 @@
                                      VerticalAlignment="Top" />
                                 <Slider Grid.Column="1" Minimum="0" Maximum="1" Margin="10,10" VerticalAlignment="Center" Value="{Binding SettingsViewModel.CF_pBrightMax, Mode=TwoWay, Delay=200, UpdateSourceTrigger=PropertyChanged}"></Slider>
                             </Grid>
-                            <Label Content="Primary Brightness Min"></Label>
+                            <Label Content="主要亮度最小值"></Label>
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="3*"/>
@@ -223,13 +223,13 @@
                         </StackPanel>
                     </Border>
 
-                    <CheckBox Content="Primary RGB Filter"
+                    <CheckBox Content="主要 RGB 滤镜"
                                   ToolTip="Use(and reveal) primary filter based on RGB colour values" Margin="5,5"
                                   IsChecked="{Binding SettingsViewModel.CF_usePrimaryRGB, Mode=TwoWay}" />
                     <Border>
                         <StackPanel  Visibility="{Binding Path=SettingsViewModel.CF_usePrimaryRGB, Converter={StaticResource BoolToVis}}">
 
-                            <Label Content="Primary Red Max"></Label>
+                            <Label Content="主要红色最大值"></Label>
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="3*"/>
@@ -240,7 +240,7 @@
                                  VerticalAlignment="Top" />
                                 <Slider Grid.Column="1" Minimum="0" Maximum="255" Margin="10,10" VerticalAlignment="Center" Value="{Binding SettingsViewModel.CF_pRMax, Mode=TwoWay, Delay=200, UpdateSourceTrigger=PropertyChanged}"></Slider>
                             </Grid>
-                            <Label Content="Primary Red Min"></Label>
+                            <Label Content="主要红色最小值"></Label>
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="3*"/>
@@ -252,7 +252,7 @@
                                 <Slider Grid.Column="1" Minimum="0" Maximum="255" Margin="10,10" VerticalAlignment="Center" Value="{Binding SettingsViewModel.CF_pRMin, Mode=TwoWay, Delay=200, UpdateSourceTrigger=PropertyChanged}"></Slider>
                             </Grid>
 
-                            <Label Content="Primary Green Max"></Label>
+                            <Label Content="主要绿色最大值"></Label>
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="3*"/>
@@ -263,7 +263,7 @@
                                  VerticalAlignment="Top" />
                                 <Slider Grid.Column="1" Minimum="0" Maximum="255" Margin="10,10" VerticalAlignment="Center" Value="{Binding SettingsViewModel.CF_pGMax, Mode=TwoWay, Delay=200, UpdateSourceTrigger=PropertyChanged}"></Slider>
                             </Grid>
-                            <Label Content="Primary Green Min"></Label>
+                            <Label Content="主要绿色最小值"></Label>
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="3*"/>
@@ -275,7 +275,7 @@
                                 <Slider Grid.Column="1" Minimum="0" Maximum="255" Margin="10,10" VerticalAlignment="Center" Value="{Binding SettingsViewModel.CF_pGMin, Mode=TwoWay, Delay=200, UpdateSourceTrigger=PropertyChanged}"></Slider>
                             </Grid>
 
-                            <Label Content="Primary Blue Max"></Label>
+                            <Label Content="主要蓝色最大值"></Label>
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="3*"/>
@@ -286,7 +286,7 @@
                                  VerticalAlignment="Top" />
                                 <Slider Grid.Column="1" Minimum="0" Maximum="255" Margin="10,10" VerticalAlignment="Center" Value="{Binding SettingsViewModel.CF_pBMax, Mode=TwoWay, Delay=200, UpdateSourceTrigger=PropertyChanged}"></Slider>
                             </Grid>
-                            <Label Content="Primary Blue Min"></Label>
+                            <Label Content="主要蓝色最小值"></Label>
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="3*"/>
@@ -300,13 +300,13 @@
                         </StackPanel>
                     </Border>
 
-                    <CheckBox Content="Secondary HSL Filter"
+                    <CheckBox Content="次要 HSL 滤镜"
                                   ToolTip="Use(and reveal) secondary filter based on HSL colour values" Margin="5,5"
                                   IsChecked="{Binding SettingsViewModel.CF_useSecondaryHSL, Mode=TwoWay}" />
                     <Border>
                         <StackPanel  Visibility="{Binding Path=SettingsViewModel.CF_useSecondaryHSL, Converter={StaticResource BoolToVis}}">
 
-                            <Label Content="Secondary Hue Max"></Label>
+                            <Label Content="次要色相最大值"></Label>
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="3*"/>
@@ -317,7 +317,7 @@
                                  VerticalAlignment="Top" />
                                 <Slider Grid.Column="1" Minimum="0" Maximum="360" Margin="10,10" VerticalAlignment="Center" Value="{Binding SettingsViewModel.CF_sHueMax, Mode=TwoWay, Delay=200, UpdateSourceTrigger=PropertyChanged}"></Slider>
                             </Grid>
-                            <Label Content="Secondary Hue Min"></Label>
+                            <Label Content="次要色相最小值"></Label>
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="3*"/>
@@ -328,7 +328,7 @@
                                  VerticalAlignment="Top" />
                                 <Slider Grid.Column="1" Minimum="0" Maximum="360" Margin="10,10" VerticalAlignment="Center" Value="{Binding SettingsViewModel.CF_sHueMin, Mode=TwoWay, Delay=200, UpdateSourceTrigger=PropertyChanged}"></Slider>
                             </Grid>
-                            <Label Content="Secondary Saturation Max"></Label>
+                            <Label Content="次要饱和度最大值"></Label>
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="3*"/>
@@ -339,7 +339,7 @@
                                  VerticalAlignment="Top" />
                                 <Slider Grid.Column="1" Minimum="0" Maximum="1" Margin="10,10" VerticalAlignment="Center" Value="{Binding SettingsViewModel.CF_sSatMax, Mode=TwoWay, Delay=200, UpdateSourceTrigger=PropertyChanged}"></Slider>
                             </Grid>
-                            <Label Content="Secondary Saturation Min"></Label>
+                            <Label Content="次要饱和度最小值"></Label>
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="3*"/>
@@ -350,7 +350,7 @@
                                  VerticalAlignment="Top" />
                                 <Slider Grid.Column="1" Minimum="0" Maximum="1" Margin="10,10" VerticalAlignment="Center" Value="{Binding SettingsViewModel.CF_sSatMin, Mode=TwoWay, Delay=200, UpdateSourceTrigger=PropertyChanged}"></Slider>
                             </Grid>
-                            <Label Content="Secondary Brightness Max"></Label>
+                            <Label Content="次要亮度最大值"></Label>
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="3*"/>
@@ -361,7 +361,7 @@
                                  VerticalAlignment="Top" />
                                 <Slider Grid.Column="1" Minimum="0" Maximum="1" Margin="10,10" VerticalAlignment="Center" Value="{Binding SettingsViewModel.CF_sBrightMax, Mode=TwoWay, Delay=200, UpdateSourceTrigger=PropertyChanged}"></Slider>
                             </Grid>
-                            <Label Content="Secondary Brightness Min"></Label>
+                            <Label Content="次要亮度最小值"></Label>
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="3*"/>
@@ -375,13 +375,13 @@
                         </StackPanel>
                     </Border>
 
-                    <CheckBox Content="Secondary RGB Filter"
+                    <CheckBox Content="次要 RGB 滤镜"
                                   ToolTip="Use(and reveal) secondary filter based on RGB colour values" Margin="5,5"
                                   IsChecked="{Binding SettingsViewModel.CF_useSecondaryRGB, Mode=TwoWay}" />
                     <Border>
                         <StackPanel  Visibility="{Binding Path=SettingsViewModel.CF_useSecondaryRGB, Converter={StaticResource BoolToVis}}">
 
-                            <Label Content="Secondary Red Max"></Label>
+                            <Label Content="次要红色最大值"></Label>
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="3*"/>
@@ -392,7 +392,7 @@
                                  VerticalAlignment="Top" />
                                 <Slider Grid.Column="1" Minimum="0" Maximum="255" Margin="10,10" VerticalAlignment="Center" Value="{Binding SettingsViewModel.CF_sRMax, Mode=TwoWay, Delay=200, UpdateSourceTrigger=PropertyChanged}"></Slider>
                             </Grid>
-                            <Label Content="Secondary Red Min"></Label>
+                            <Label Content="次要红色最小值"></Label>
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="3*"/>
@@ -404,7 +404,7 @@
                                 <Slider Grid.Column="1" Minimum="0" Maximum="255" Margin="10,10" VerticalAlignment="Center" Value="{Binding SettingsViewModel.CF_sRMin, Mode=TwoWay, Delay=200, UpdateSourceTrigger=PropertyChanged}"></Slider>
                             </Grid>
 
-                            <Label Content="Secondary Green Max"></Label>
+                            <Label Content="次要绿色最大值"></Label>
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="3*"/>
@@ -415,7 +415,7 @@
                                  VerticalAlignment="Top" />
                                 <Slider Grid.Column="1" Minimum="0" Maximum="255" Margin="10,10" VerticalAlignment="Center" Value="{Binding SettingsViewModel.CF_sGMax, Mode=TwoWay, Delay=200, UpdateSourceTrigger=PropertyChanged}"></Slider>
                             </Grid>
-                            <Label Content="Secondary Green Min"></Label>
+                            <Label Content="次要绿色最小值"></Label>
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="3*"/>
@@ -427,7 +427,7 @@
                                 <Slider Grid.Column="1" Minimum="0" Maximum="255" Margin="10,10" VerticalAlignment="Center" Value="{Binding SettingsViewModel.CF_sGMin, Mode=TwoWay, Delay=200, UpdateSourceTrigger=PropertyChanged}"></Slider>
                             </Grid>
 
-                            <Label Content="Secondary Blue Max"></Label>
+                            <Label Content="次要蓝色最大值"></Label>
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="3*"/>
@@ -438,7 +438,7 @@
                                  VerticalAlignment="Top" />
                                 <Slider Grid.Column="1" Minimum="0" Maximum="255" Margin="10,10" VerticalAlignment="Center" Value="{Binding SettingsViewModel.CF_sBMax, Mode=TwoWay, Delay=200, UpdateSourceTrigger=PropertyChanged}"></Slider>
                             </Grid>
-                            <Label Content="Secondary Blue Min"></Label>
+                            <Label Content="次要蓝色最小值"></Label>
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="3*"/>
@@ -469,32 +469,32 @@
                             Grid.Column="1" Grid.Row="0"
                             Padding="5"
                             DockPanel.Dock="Right"
-                            Content="Show Unfiltered"
-                            ToolTip="Shows your test image in the preview area"
+                            Content="显示未过滤"
+                            ToolTip="在预览区域显示测试图片"
                             FontWeight="Regular"
                             Style="{StaticResource Label_Button}" />
                         <Label MouseLeftButtonDown="ApplyFilter"
                             Grid.Column="1" Grid.Row="1"
                             Padding="5"
                             DockPanel.Dock="Right"
-                            Content="Apply Filter"
-                            ToolTip="Applies the custom filter to your test image and displays it"
+                            Content="应用滤镜"
+                            ToolTip="将自定义滤镜应用于测试图片并显示"
                             FontWeight="Regular"
                             Style="{StaticResource Label_Button}" />
                         <Label MouseLeftButtonDown="LoadLatest"
                                 Grid.Column="0" Grid.Row="0"
                                 Padding="5"
                                 DockPanel.Dock="Right"
-                                Content="Load Last Use"
-                                ToolTip="Loads test image from your last attempted activation of any scanning functionality"
+                                Content="加载上次使用"
+                                ToolTip="加载上次尝试激活任何扫描功能时的测试图片"
                                 FontWeight="Regular"
                                 Style="{StaticResource Label_Button}" />
                         <Label MouseLeftButtonDown="LoadFromFile"
                                 Grid.Column="0" Grid.Row="1"
                                 Padding="5"
                                 DockPanel.Dock="Right"
-                                Content="Load From File"
-                                ToolTip="Choose a file to load as test image"
+                                Content="从文件加载"
+                                ToolTip="选择要加载为测试图片的文件"
                                 FontWeight="Regular"
                                 Style="{StaticResource Label_Button}" />
                         <TextBox x:Name="filterTextBox"
@@ -505,22 +505,22 @@
                                 AcceptsReturn="True"
                                 AcceptsTab="True"
                                 Text=""
-                                ToolTip="Field for importing/exporting custom filters. Used with the buttons below"
+                                ToolTip="导入/导出自定义滤镜的文本框，配合下方按钮使用"
                                 Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2"/>
                         <Label MouseLeftButtonDown="ImportFilterJson"
                                 Grid.Column="0" Grid.Row="3"
                                 Padding="5"
                                 DockPanel.Dock="Right"
-                                Content="Import Filter"
-                                ToolTip="Attempts to import filter data from the text box above"
+                                Content="导入滤镜"
+                                ToolTip="尝试从上方文本框导入滤镜数据"
                                 FontWeight="Regular"
                                 Style="{StaticResource Label_Button}" />
                         <Label MouseLeftButtonDown="ExportFilterJson"
                                 Grid.Column="1" Grid.Row="3"
                                 Padding="5"
                                 DockPanel.Dock="Right"
-                                Content="Export Filter"
-                                ToolTip="Exports your custom filter to the text box above"
+                                Content="导出滤镜"
+                                ToolTip="将自定义滤镜导出到上方文本框"
                                 FontWeight="Regular"
                                 Style="{StaticResource Label_Button}" />
                     </Grid>

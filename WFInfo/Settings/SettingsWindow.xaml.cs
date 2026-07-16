@@ -112,11 +112,11 @@ namespace WFInfo.Settings
                 var message = "Do you want to enable the new auto mode?" + Environment.NewLine +
                               "This connects to the warframe debug logger to detect the reward window." + Environment.NewLine +
                               "The logger contains info about your pc specs, your public IP, and your email." + Environment.NewLine +
-                              "We will be ignoring all of that and only looking for the Fissure Reward Screen." + Environment.NewLine +
-                              "We will begin listening after your approval, and it is completely inactive currently." + Environment.NewLine +
-                              "If you opt-in, we will be using a windows method to receive this info quicker, but it is the same info being written to EE.log, which you can check before agreeing." + Environment.NewLine +
-                              "If you want more information or have questions, please contact us on Discord.";
-                MessageBoxResult messageBoxResult = MessageBox.Show(message, "Automation Mode Opt-In", MessageBoxButton.YesNo);
+                              "我们将忽略其他内容，仅查找裂缝奖励画面。" + Environment.NewLine +
+                              "获得批准后将开始监听，目前完全处于非活动状态。" + Environment.NewLine +
+                              "选择加入后，我们将使用 Windows 方法更快获取此信息，但与写入 EE.log 的信息相同，您可以在同意前查看。" + Environment.NewLine +
+                              "如需更多信息或有疑问，请在 Discord 上联系我们。";
+                MessageBoxResult messageBoxResult = MessageBox.Show(message, "自动模式选择加入", MessageBoxButton.YesNo);
                 if (messageBoxResult == MessageBoxResult.Yes)
                 {
                     Main.dataBase.EnableLogCapture();

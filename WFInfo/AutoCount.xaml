@@ -6,7 +6,7 @@
         xmlns:wfInfo="clr-namespace:WFInfo"
         xmlns:components="clr-namespace:WFInfo.Components"
         mc:Ignorable="d"
-        Title="Auto Add"
+        Title="自动添加"
         MaxWidth="400"
         MinWidth="400"
         Width="400"
@@ -98,10 +98,10 @@
         </Grid.Resources>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="自动" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
+            <RowDefinition Height="自动" />
             <RowDefinition Height="*" />
             <RowDefinition Height="30"> </RowDefinition>
         </Grid.RowDefinitions>
@@ -124,7 +124,7 @@
                        Style="{StaticResource Label_Button}"
                        VerticalContentAlignment="Stretch"
                        DockPanel.Dock="Right" />
-                <TextBlock Text="Auto Add"
+                <TextBlock Text="自动添加"
                            VerticalAlignment="Center"
                            FontSize="16"
                            FontFamily="{StaticResource Roboto_Black}"
@@ -151,7 +151,7 @@
                 </ResourceDictionary>
             </DataGrid.Resources>
             <DataGrid.Columns>
-                    <DataGridTemplateColumn Header=" Items" Width="*">
+                    <DataGridTemplateColumn Header=" 物品" Width="*">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <ComboBox 
@@ -168,7 +168,7 @@
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
-                    <DataGridTemplateColumn Header="Save" Width="70">
+                    <DataGridTemplateColumn Header="保存" Width="70">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <Label Grid.Column="1" Content="✓" Foreground="#506464" FontSize="14" Width="20" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center"   Style="{StaticResource Label_Button}">
@@ -179,7 +179,7 @@
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
-                    <DataGridTemplateColumn Header="Dismiss" Width="70">
+                    <DataGridTemplateColumn Header="关闭" Width="70">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <Label Grid.Column="2" Content="X" Foreground="#506464" FontSize="14" Width="20" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center"   Style="{StaticResource Label_Button}">
@@ -198,13 +198,13 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Label Grid.Column="0" Content="Save all" Foreground="#506464" FontSize="14" Style="{StaticResource Label_Button}">
+            <Label Grid.Column="0" Content="保存全部" Foreground="#506464" FontSize="14" Style="{StaticResource Label_Button}">
                 <Label.InputBindings>
                     <MouseBinding MouseAction="LeftClick" Command="{Binding IncrementAll}" />
                 </Label.InputBindings>
             </Label>
 
-            <Label Grid.Column="1" Content="Dismiss all" Foreground="#506464" FontSize="14" Style="{StaticResource Label_Button}">
+            <Label Grid.Column="1" Content="全部关闭" Foreground="#506464" FontSize="14" Style="{StaticResource Label_Button}">
                 <Label.InputBindings>
                     <MouseBinding MouseAction="LeftClick" Command="{Binding RemoveAll}" />
                 </Label.InputBindings>

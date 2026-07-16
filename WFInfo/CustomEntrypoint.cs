@@ -144,7 +144,7 @@ namespace WFInfo
                 {
                     sw.WriteLineAsync("[" + DateTime.UtcNow + "]   Duplicate process found - start canceled. Version: " + version);
                 }
-                MessageBox.Show("Another instance of WFInfo is already running, close it and try again", "WFInfo V" + version);
+                MessageBox.Show("WFInfo 已在运行，请关闭后重试", "WFInfo V" + version);
                 return;
             }
 

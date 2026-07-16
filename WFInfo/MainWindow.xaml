@@ -26,7 +26,7 @@
         <Label x:Name="Version" Content="vX.X.X" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="77,1,0,0" FontSize="11" FontWeight="Bold" Width="43" Height="21"/>
         <Label x:Name="minimise" MouseLeftButtonDown="Minimise" Content="_" Margin="0,0,21,0" Style="{StaticResource Label_Button}" Padding="0,0,0,3" Height="22" VerticalAlignment="Top" HorizontalAlignment="Right" Width="22" BorderBrush="{x:Null}"/>
         <Label x:Name="exit" MouseLeftButtonDown="Exit" Content="x" Style="{StaticResource Label_Button}" Height="22" VerticalAlignment="Top" HorizontalAlignment="Right" Width="22"/>
-        <Label x:Name="Website" ToolTip="Opens WFinfo discord" MouseLeftButtonDown="WebsiteClick" Margin="0,22,1,0" Padding="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0,1,0,0" Height="20" VerticalAlignment="Top" HorizontalAlignment="Right" Width="20">
+        <Label x:Name="Website" ToolTip="打开 WFinfo Discord" MouseLeftButtonDown="WebsiteClick" Margin="0,22,1,0" Padding="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0,1,0,0" Height="20" VerticalAlignment="Top" HorizontalAlignment="Right" Width="20">
             <Label.Style>
                 <Style>
                     <Setter Property="ContentControl.Content">
@@ -50,7 +50,7 @@
                 </Style>
             </Label.Style>
         </Label>
-        <Label x:Name="Relics" ToolTip="Relics, search for what relic you need to use" MouseLeftButtonDown="RelicsClick" Margin="0,22,22,0" Padding="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="20" VerticalAlignment="Top" HorizontalAlignment="Right" Width="20">
+        <Label x:Name="Relics" ToolTip="遗物，搜索需要的遗物类型" MouseLeftButtonDown="RelicsClick" Margin="0,22,22,0" Padding="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="20" VerticalAlignment="Top" HorizontalAlignment="Right" Width="20">
             <Label.Style>
                 <Style>
                     <Setter Property="ContentControl.Content">
@@ -74,7 +74,7 @@
                 </Style>
             </Label.Style>
         </Label>
-        <Label x:Name="Gear" ToolTip="Equipment, see which items you own" MouseLeftButtonDown="EquipmentClick"  Margin="0,42,22,0" Padding="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="20" VerticalAlignment="Top" HorizontalAlignment="Right" Width="20">
+        <Label x:Name="Gear" ToolTip="装备，查看你拥有的物品" MouseLeftButtonDown="EquipmentClick"  Margin="0,42,22,0" Padding="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="20" VerticalAlignment="Top" HorizontalAlignment="Right" Width="20">
             <Label.Style>
                 <Style>
                     <Setter Property="ContentControl.Content">
@@ -98,7 +98,7 @@
                 </Style>
             </Label.Style>
         </Label>
-        <Label x:Name="Settings_Button" ToolTip="Settings" MouseLeftButtonDown="Settings_click" Margin="0,42,1,0" Padding="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="20" VerticalAlignment="Top" HorizontalAlignment="Right" Width="20">
+        <Label x:Name="Settings_Button" ToolTip="设置" MouseLeftButtonDown="Settings_click" Margin="0,42,1,0" Padding="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="20" VerticalAlignment="Top" HorizontalAlignment="Right" Width="20">
             <Label.Style>
                 <Style>
                     <Setter Property="ContentControl.Content">
@@ -122,7 +122,7 @@
                 </Style>
             </Label.Style>
         </Label>
-        <Label x:Name="ReloadMarket" ToolTip="Reloads market and prime data" Grid.Column="0" Foreground="{x:Null}" MouseLeftButtonDown="ReloadDataClick" Margin="6,26,0,0" Padding="3" Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Width="20">
+        <Label x:Name="ReloadMarket" ToolTip="重新加载市场和 Prime 数据" Grid.Column="0" Foreground="{x:Null}" MouseLeftButtonDown="ReloadDataClick" Margin="6,26,0,0" Padding="3" Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Width="20">
             <Label.Style>
                 <Style>
                     <Setter Property="ContentControl.Content">
@@ -147,14 +147,14 @@
             </Label.Style>
         </Label>
         <TextBlock                 Text=" Status:"    FontSize="13" Margin="1,0,0,1"
-                                   Grid.Column="0" FontFamily="{StaticResource Roboto_Condensed_Bold}" Height="32" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="43" ToolTip="The latest status update provided from the program"/>
-        <TextBlock x:Name="Status" Text="Loading..." TextWrapping="Wrap" FontSize="13" Margin="44,0,43,1"     FontFamily="{StaticResource Roboto_Condensed}" Height="32" VerticalAlignment="Bottom" ToolTip="Click to open data folder" MouseLeftButtonDown="OpenAppDataFolder"/>
-        <Label Content="Market Data:" Background="{x:Null}" Padding="5,2,5,5" FontSize="16" Margin="26,24,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="24" Width="101"/>
-        <Label x:Name="MarketData"       Content="Loading..."   Background="{x:Null}" Padding="5,2,5,5" FontSize="16" Margin="132,24,0,0" VerticalAlignment="Top" Height="26" HorizontalAlignment="Left" Width="156"/>
-        <Label Content="Prime Data:"  Background="{x:Null}" Padding="5,2,5,5" FontSize="16" Margin="26,48,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="23" Width="101"/>
-        <Label x:Name="DropData"         Content="Loading..."   Background="{x:Null}" Padding="5,2,5,5" FontSize="16" Margin="132,48,0,0" VerticalAlignment="Top" Height="26" HorizontalAlignment="Left" Width="156"/>
+                                   Grid.Column="0" FontFamily="{StaticResource Roboto_Condensed_Bold}" Height="32" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="43" ToolTip="程序提供的最新状态更新"/>
+        <TextBlock x:Name="Status" Text="加载中..." TextWrapping="Wrap" FontSize="13" Margin="44,0,43,1"     FontFamily="{StaticResource Roboto_Condensed}" Height="32" VerticalAlignment="Bottom" ToolTip="点击打开数据文件夹" MouseLeftButtonDown="OpenAppDataFolder"/>
+        <Label Content="市场数据：" Background="{x:Null}" Padding="5,2,5,5" FontSize="16" Margin="26,24,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="24" Width="101"/>
+        <Label x:Name="MarketData"       Content="加载中..."   Background="{x:Null}" Padding="5,2,5,5" FontSize="16" Margin="132,24,0,0" VerticalAlignment="Top" Height="26" HorizontalAlignment="Left" Width="156"/>
+        <Label Content="Prime 数据："  Background="{x:Null}" Padding="5,2,5,5" FontSize="16" Margin="26,48,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="23" Width="101"/>
+        <Label x:Name="DropData"         Content="加载中..."   Background="{x:Null}" Padding="5,2,5,5" FontSize="16" Margin="132,48,0,0" VerticalAlignment="Top" Height="26" HorizontalAlignment="Left" Width="156"/>
 
-        <tb:TaskbarIcon x:Name="NotifyIcon" Visibility="Visible" ToolTipText="Warframe info" IconSource="Resources\WFLogo.ico" TrayMouseDoubleClick="ToForeground" Grid.ColumnSpan="2">
+        <tb:TaskbarIcon x:Name="NotifyIcon" Visibility="Visible" ToolTipText="Warframe 信息" IconSource="Resources\WFLogo.ico" TrayMouseDoubleClick="ToForeground" Grid.ColumnSpan="2">
             <tb:TaskbarIcon.ContextMenu>
                 <ContextMenu>
                     <ContextMenu.Resources>
@@ -165,16 +165,16 @@
                     <ContextMenu.Style>
                         <StaticResource ResourceKey="WFInfo_ContextMenu"/>
                     </ContextMenu.Style>
-                    <MenuItem Header="Show" Click="ToForeground" FontWeight="Heavy"/>
-                    <MenuItem Header="Relics" Click="RelicsClick" />
-                    <MenuItem Header="Equipment" Click="EquipmentClick" />
+                    <MenuItem Header="显示" Click="ToForeground" FontWeight="Heavy"/>
+                    <MenuItem Header="遗物" Click="RelicsClick" />
+                    <MenuItem Header="装备" Click="EquipmentClick" />
                     <Separator Style="{StaticResource WFInfo_Separator}"/>
-                    <MenuItem Header="Exit" Click="Exit" />
+                    <MenuItem Header="退出" Click="退出" />
                 </ContextMenu>
             </tb:TaskbarIcon.ContextMenu>
         </tb:TaskbarIcon>
 
-        <Label Visibility="Collapsed" x:Name="CreateListing" ToolTip="Create listings from previous rewards" MouseLeftButtonDown="CreateListing_MouseLeftButtonDown" Margin="0,62,22,0" Padding="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="20" VerticalAlignment="Top" HorizontalAlignment="Right" Width="20">
+        <Label Visibility="Collapsed" x:Name="CreateListing" ToolTip="从之前的奖励创建列表" MouseLeftButtonDown="CreateListing_MouseLeftButtonDown" Margin="0,62,22,0" Padding="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="20" VerticalAlignment="Top" HorizontalAlignment="Right" Width="20">
             <Label.Style>
                 <Style>
                     <Setter Property="ContentControl.Content">
@@ -199,7 +199,7 @@
             </Label.Style>
         </Label>
         <Rectangle Stroke="#FF646464" Margin="210,0,42,0" Height="22" VerticalAlignment="Top"/>
-        <Button x:Name="Login" IsEnabled="False" Content="Login to WFM" HorizontalAlignment="Left" Margin="211,1,0,0" VerticalAlignment="Top" Width="80" Height="20" Background="{x:Null}" Foreground="#FFB1D0D9" Click="SpawnLogin">
+        <Button x:Name="Login" IsEnabled="False" Content="登录 WFM" HorizontalAlignment="Left" Margin="211,1,0,0" VerticalAlignment="Top" Width="80" Height="20" Background="{x:Null}" Foreground="#FFB1D0D9" Click="SpawnLogin">
             <Button.Style>
                 <Style TargetType="{x:Type Button}">
                     <Setter Property="Template">
@@ -219,7 +219,7 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Label x:Name="PlusOneButton" Visibility="Collapsed" ToolTip="Post a review for the developers" MouseLeftButtonDown="PlusOne" Margin="0,82,22,0" Padding="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="20" VerticalAlignment="Top" HorizontalAlignment="Right" Width="20">
+        <Label x:Name="PlusOneButton" Visibility="Collapsed" ToolTip="给开发者发表评价" MouseLeftButtonDown="PlusOne" Margin="0,82,22,0" Padding="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="20" VerticalAlignment="Top" HorizontalAlignment="Right" Width="20">
             <Label.Style>
                 <Style>
                     <Setter Property="ContentControl.Content">
@@ -244,12 +244,12 @@
             </Label.Style>
         </Label>
         <ComboBox x:Name="ComboBox"  SelectionChanged="ComboBoxOnSelectionChanged" Visibility="Collapsed" HorizontalAlignment="Left" VerticalAlignment="Top" Width="82" Height="22" Background="#FF0F0F0F" Foreground="#FFAFD0D9" BorderBrush="{x:Null}" Style="{DynamicResource ComboBoxStyle1}" ItemContainerStyle="{DynamicResource ComboBoxItemStyle1}" Margin="210,0,0,0" >
-            <ComboBoxItem Content="Ingame"/>
-            <ComboBoxItem IsSelected="True" Content="Online"/>
-            <ComboBoxItem Content="Invisible"/>
-            <ComboBoxItem Content="Log out"/>
+            <ComboBoxItem Content="游戏中"/>
+            <ComboBoxItem IsSelected="True" Content="在线"/>
+            <ComboBoxItem Content="隐身"/>
+            <ComboBoxItem Content="登出"/>
         </ComboBox>
-        <Label x:Name="SearchItButton" ToolTip="Launch search it" MouseLeftButtonDown="SearchItButton_MouseLeftButtonDown" Margin="0,62,1,0" Padding="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="20" VerticalAlignment="Top" Visibility="Collapsed" HorizontalAlignment="Right" Width="20">
+        <Label x:Name="SearchItButton" ToolTip="启动搜索" MouseLeftButtonDown="SearchItButton_MouseLeftButtonDown" Margin="0,62,1,0" Padding="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="20" VerticalAlignment="Top" Visibility="Collapsed" HorizontalAlignment="Right" Width="20">
             <Label.Style>
                 <Style>
                     <Setter Property="ContentControl.Content">

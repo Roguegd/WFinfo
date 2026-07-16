@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WFInfo"
         mc:Ignorable="d"
-        Title="Overlay" Height="160" Width="243" WindowStyle="None" AllowsTransparency="True" ResizeMode="NoResize" ShowInTaskbar="False" Topmost="True" IsTabStop="False" Focusable="False">
+        Title="覆盖" Height="160" Width="243" WindowStyle="None" AllowsTransparency="True" ResizeMode="NoResize" ShowInTaskbar="False" Topmost="True" IsTabStop="False" Focusable="False">
     <Window.Background>
         <ImageBrush  ImageSource="Resources/background.jpg"/>
     </Window.Background>
@@ -16,16 +16,16 @@
             </Style>
         </Grid.Resources>
         <Viewbox x:Name="partMargin" Margin="0,39,0,100" HorizontalAlignment="Center">
-            <TextBlock x:Name="partText" Text="Part name"/>
+            <TextBlock x:Name="partText" Text="部件名称"/>
         </Viewbox>
         <Viewbox x:Name="volumeMargin" Margin="0,104,0,37" >
-            <TextBlock x:Name="volumeText" Text="XX sold last 48hrs"/>
+            <TextBlock x:Name="volumeText" Text="过去 48 小时售出 XX"/>
         </Viewbox>
         <Viewbox x:Name="vaultedMargin" Margin="0,15,23,130" HorizontalAlignment="Right" Visibility="Hidden" >
-            <TextBlock x:Name="vaultedText" Text="VAULTED" Foreground="#FF828C96" FontFamily="{StaticResource Roboto}"/>
+            <TextBlock x:Name="vaultedText" Text="已入库" Foreground="#FF828C96" FontFamily="{StaticResource Roboto}"/>
         </Viewbox>
         <Viewbox x:Name="ownedMargin" Margin="23,15,0,130" HorizontalAlignment="Left" >
-            <TextBlock x:Name="ownedText" Text="Number of owned" Foreground="#FF828C96" FontFamily="{StaticResource Roboto}"/>
+            <TextBlock x:Name="ownedText" Text="拥有数量" Foreground="#FF828C96" FontFamily="{StaticResource Roboto}"/>
         </Viewbox>
         <Viewbox x:Name="platMargin" Margin="0,77,162,63" HorizontalAlignment="Right">
             <TextBlock x:Name="platText" Text="100"/>
@@ -52,10 +52,10 @@
         <Image x:Name="EfficiencyPlatinumImage" Visibility="Collapsed" Source="Resources/plat.gif" Margin="206,0,0,64" Height="12" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="12"/>
 
         <Viewbox x:Name="primeSetMargin" Margin="0,130,0,15" >
-            <TextBlock x:Name="primeSetPlatText" Text="Full set price: XXX"/>
+            <TextBlock x:Name="primeSetPlatText" Text="全套价格：XXX"/>
         </Viewbox>
         <Image x:Name="setPlatImage" Source="Resources/plat.gif" Margin="115,0,0,15" Height="15" Width="15" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
 
-        <Image x:Name="warningImage" Visibility="Visible" ToolTip="This item has higher-than-normal probability of being a misread" Source="Resources/warning-sign.png" Margin="0,0,180,15" Height="30" Width="30" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+        <Image x:Name="warningImage" Visibility="Visible" ToolTip="此物品有较高的误读概率" Source="Resources/warning-sign.png" Margin="0,0,180,15" Height="30" Width="30" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
     </Grid>
 </Window>

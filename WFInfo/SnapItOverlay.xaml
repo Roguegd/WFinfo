@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WFInfo"
         mc:Ignorable="d"
-        Title="SnapItOverlay" BorderThickness="0" AllowsTransparency="True" BorderBrush="Transparent" Background="#40FFFFFF" WindowStyle="None" Height="0" Width="0" WindowStartupLocation="Manual">
+        Title="截图覆盖" BorderThickness="0" AllowsTransparency="True" BorderBrush="Transparent" Background="#40FFFFFF" WindowStyle="None" Height="0" Width="0" WindowStartupLocation="Manual">
     <Window.Resources>
         <Storyboard x:Key="MarchingAnts">
             <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
@@ -49,7 +49,7 @@
         </Canvas>
         <!-- Centered exit prompt: placed in Grid so HorizontalAlignment works -->
         <Border VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,10" Background="#80000000" CornerRadius="8" Padding="20,8" IsHitTestVisible="False">
-            <TextBlock TextWrapping="Wrap" Text="Press any key to exit" FontSize="48" Foreground="White" TextAlignment="Center"/>
+            <TextBlock TextWrapping="Wrap" Text="按任意键退出" FontSize="48" Foreground="White" TextAlignment="Center"/>
         </Border>
     </Grid>
 </Window>

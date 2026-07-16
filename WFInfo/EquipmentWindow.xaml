@@ -6,25 +6,25 @@
         mc:Ignorable="d"
         xmlns:local="clr-namespace:WFInfo"
         x:Class="WFInfo.EquipmentWindow"
-        Title="Equipment" Height="400" Width="400" WindowStyle="None" AllowsTransparency="True" Loaded="WindowLoaded" ResizeMode="CanResizeWithGrip" MinWidth="400" MaxWidth="400" MinHeight="110">
+        Title="装备" Height="400" Width="400" WindowStyle="None" AllowsTransparency="True" Loaded="WindowLoaded" ResizeMode="CanResizeWithGrip" MinWidth="400" MaxWidth="400" MinHeight="110">
     <Window.Resources>
 
     </Window.Resources>
     <Grid MouseDown="MouseDown">
         <Rectangle Fill="#FF1B1B1B" Stroke="#FF646464" />
-        <Label MouseLeftButtonDown="ExpandAll" Content="＋" FontSize="15" ToolTip="Expand All Levels" Padding="0" Margin="0,26,379,0" Style="{StaticResource Label_Button}" Height="20" VerticalAlignment="Top"/>
-        <Label MouseLeftButtonDown="CollapseAll" Content="－" FontSize="15" ToolTip="Collapse All Levels" Padding="0" Margin="20,26,359,0" Style="{StaticResource Label_Button}" Height="20" VerticalAlignment="Top"/>
+        <Label MouseLeftButtonDown="ExpandAll" Content="＋" FontSize="15" ToolTip="展开所有等级" Padding="0" Margin="0,26,379,0" Style="{StaticResource Label_Button}" Height="20" VerticalAlignment="Top"/>
+        <Label MouseLeftButtonDown="CollapseAll" Content="－" FontSize="15" ToolTip="折叠所有等级" Padding="0" Margin="20,26,359,0" Style="{StaticResource Label_Button}" Height="20" VerticalAlignment="Top"/>
 
         <Grid Margin="1,27,1,0" Height="18" VerticalAlignment="Top">
             <Rectangle Fill="#FF0F0F0F" Stroke="#FF646464" Margin="-1" />
-            <CheckBox x:Name="vaulted" Content="Hide Vaulted" ToolTip="Show vaulted items." Click="VaultedClick" IsChecked="True" Margin="52,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-            <!-- <CheckBox x:Name="vaulted" Content="Hide Vaulted" ToolTip="Hide vaulted items." VerticalContentAlignment="Center" Background="#FFB1D0D9" BorderBrush="#FF0F0F0F" Margin="39,-1,0,-1" Height="20" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="107" FontSize="14" Click="VaultedClick" IsChecked="True"/> -->
+            <CheckBox x:Name="vaulted" Content="隐藏入库" ToolTip="显示已入库物品。" Click="VaultedClick" IsChecked="True" Margin="52,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+            <!-- <CheckBox x:Name="vaulted" Content="隐藏入库" ToolTip="隐藏已入库物品。" VerticalContentAlignment="Center" Background="#FFB1D0D9" BorderBrush="#FF0F0F0F" Margin="39,-1,0,-1" Height="20" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="107" FontSize="14" Click="VaultedClick" IsChecked="True"/> -->
             <TextBox x:Name="textBox" Margin="191,0,0,0" VerticalContentAlignment="Center" Padding="0" Text="Filter Terms" Foreground="#FF646464" TextChanged="TextboxTextChanged" SelectionBrush="#FF7EB4EA" GotFocus="TextBoxFocus" LostFocus="TextBoxLostFocus" BorderBrush="#FF303030" BorderThickness="1,0,0,0"/>
             <Rectangle Stroke="#FF646464" Margin="149,-1,-1,-1"/>
-            <Label Content="Filter:" HorizontalAlignment="Left" Margin="155,0,0,0" Padding="0" VerticalContentAlignment="Center" />
+            <Label Content="筛选：" HorizontalAlignment="Left" Margin="155,0,0,0" Padding="0" VerticalContentAlignment="Center" />
 
         </Grid>
-        <Label x:Name="eqmtComboButton" MouseLeftButtonDown="ToggleShowAllEqmt" Content="Equipment Types" FontSize="12" FontWeight="Normal" Margin="0,45,276,0" Style="{StaticResource Label_Button}" Height="20" VerticalAlignment="Top"/>
+        <Label x:Name="eqmtComboButton" MouseLeftButtonDown="ToggleShowAllEqmt" Content="装备类型" FontSize="12" FontWeight="Normal" Margin="0,45,276,0" Style="{StaticResource Label_Button}" Height="20" VerticalAlignment="Top"/>
         <Grid Margin="1,46,1,0" Height="18" VerticalAlignment="Top">
             <Rectangle Fill="#FF0F0F0F" Stroke="#FF646464" Margin="-1" Grid.RowSpan="2" />
             <Rectangle Stroke="#FF646464" Margin="122,-1,-1,-1" Grid.RowSpan="2"/>
@@ -55,23 +55,23 @@
                         </Style>
                     </Border.Style>
                     <ComboBox x:Name="SortBox" Background="#FF0F0F0F" Foreground="#FFAFD0D9" SelectionChanged="SortBoxChanged" Style="{DynamicResource ComboBoxStyle1}" ItemContainerStyle="{DynamicResource ComboBoxItemStyle1}" BorderThickness="0">
-                        <ComboBoxItem IsSelected="True" Content="Name"/>
-                        <ComboBoxItem Content="Cost"/>
-                        <ComboBoxItem Content="Unowned"/>
-                        <ComboBoxItem Content="Owned"/>
-                        <ComboBoxItem Content="Owned Value (Plat)"/>
-                        <ComboBoxItem Content="Owned Value (Ducats)"/>
+                        <ComboBoxItem IsSelected="True" Content="名称"/>
+                        <ComboBoxItem Content="花费"/>
+                        <ComboBoxItem Content="未拥有"/>
+                        <ComboBoxItem Content="已拥有"/>
+                        <ComboBoxItem Content="拥有价值（白金）"/>
+                        <ComboBoxItem Content="拥有价值（杜卡德）"/>
                     </ComboBox>
                 </Border>
             </Border>
-            <Label Content="Sort by:" Margin="129,0,0,0" Padding="0" VerticalContentAlignment="Center" FontSize="12" Background="{x:Null}" HorizontalAlignment="Left"/>
+            <Label Content="排序：" Margin="129,0,0,0" Padding="0" VerticalContentAlignment="Center" FontSize="12" Background="{x:Null}" HorizontalAlignment="Left"/>
 
         </Grid>
         <Grid Height="27" VerticalAlignment="Top">
             <Rectangle x:Name="Main_bar" Fill="#FF0F0F0F" Height="27" Stroke="#FF646464" VerticalAlignment="Top"/>
 
             <Image HorizontalAlignment="Left" Height="26" VerticalAlignment="Center" Width="26" RenderTransformOrigin="-1.263,-0.625" Margin="2,0,0,1" Source="Resources/WFLogo.png" />
-            <TextBlock Text="Equipment" Margin="34,4,0,0" Background="{x:Null}" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" FontFamily="{StaticResource Roboto_Black}" FontWeight="Bold" Grid.Column="1" />
+            <TextBlock Text="装备" Margin="34,4,0,0" Background="{x:Null}" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" FontFamily="{StaticResource Roboto_Black}" FontWeight="Bold" Grid.Column="1" />
             <Label x:Name="exit" MouseLeftButtonDown="Hide" Content="x" Width="30" Style="{StaticResource Label_Button}" HorizontalAlignment="Right"/>
         </Grid>
         <Grid x:Name="ListGrid" Margin="1,65,1,1">
@@ -100,9 +100,9 @@
                             
                             <Grid Grid.Column="1" Margin="5,0,5,0" Background="Transparent">
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="自动" />
                                     <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="自动" />
                                 </Grid.ColumnDefinitions>
                                 
                                 <Label Content="✓" Foreground="#506464" FontSize="13" Padding="0,-13,0,0">
@@ -220,10 +220,10 @@
 
                             <Grid Grid.Column="2" Margin="5,0,5,0" Background="Transparent">
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="自动" />
                                     <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="自动" />
+                                    <ColumnDefinition Width="自动" />
                                 </Grid.ColumnDefinitions>
 
                                 <TextBlock HorizontalAlignment="Left"  Grid.Column="0" Text="{Binding Col2_Text1}" Foreground="{Binding NameBrush}" />

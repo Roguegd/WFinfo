@@ -259,7 +259,7 @@ namespace WFInfo
         private void TextBoxLostFocus(object sender, RoutedEventArgs e)
         {
             if (!searchActive)
-                textBox.Text = "Filter Terms";
+                textBox.Text = "筛选条件";
         }
 
         private void ToggleShowAllEqmt(object sender, RoutedEventArgs e)

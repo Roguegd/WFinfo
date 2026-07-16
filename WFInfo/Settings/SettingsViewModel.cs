@@ -429,11 +429,11 @@ namespace WFInfo.Settings
 
         private bool ConfirmThemeChangeIntentional(WFtheme oldTheme, WFtheme newTheme)
         {
-            MessageBoxResult messageBoxResult = MessageBox.Show("You are about to force WFInfo to think you're using the " + newTheme + " theme in-game." + Environment.NewLine + Environment.NewLine
-                + "If this is wrong, WFInfo will not be able to do its job." + Environment.NewLine + Environment.NewLine
-                + "We STRONGLY recommend setting this to AUTO." + Environment.NewLine + Environment.NewLine
-                + "Are you sure?",
-                "Change of target theme", MessageBoxButton.OKCancel);
+            MessageBoxResult messageBoxResult = MessageBox.Show("您即将强制 WFInfo 认为您正在游戏中使用 " + newTheme + " 主题。" + Environment.NewLine + Environment.NewLine
+                + "如果设置错误，WFInfo 将无法正常工作。" + Environment.NewLine + Environment.NewLine
+                + "我们强烈建议将其设置为 AUTO。" + Environment.NewLine + Environment.NewLine
+                + "确定吗？",
+                "更改目标主题", MessageBoxButton.OKCancel);
             return messageBoxResult == MessageBoxResult.OK;
         }
 

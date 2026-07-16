@@ -61,7 +61,7 @@
     </Style>
 
     <Style TargetType="RadioButton" BasedOn="{StaticResource baseStyle}"/>
-    <Style TargetType="Label" BasedOn="{StaticResource baseStyle}"/>
+    <Style TargetType="标签" BasedOn="{StaticResource baseStyle}"/>
     <Style TargetType="TextBox" BasedOn="{StaticResource baseStyle}"/>
     <Style TargetType="TextBlock" BasedOn="{StaticResource baseStyle}"/>
     <Style TargetType="ToolTip" BasedOn="{StaticResource baseStyle}">
@@ -86,7 +86,7 @@
         </Setter>
     </Style>
     
-    <Style x:Key="Button_Button" TargetType="Button">
+    <Style x:Key="Button_Button" TargetType="按钮">
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="FontSize" Value="16"/>
         <Setter Property="Foreground" Value="#FFB1D0D9"/>
@@ -122,7 +122,7 @@
             </Setter.Value>
         </Setter>
     </Style>
-    <Style x:Key="Label_Button" TargetType="Label">
+    <Style x:Key="Label_Button" TargetType="标签">
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="FontSize" Value="16"/>
         <Setter Property="Foreground" Value="#FFB1D0D9"/>
@@ -391,8 +391,8 @@
         <Setter Property="BorderBrush" Value="{StaticResource ComboBox.Static.Border}"/>
         <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.WindowTextBrushKey}}"/>
         <Setter Property="BorderThickness" Value="1"/>
-        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
-        <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="自动"/>
+        <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="自动"/>
         <Setter Property="Padding" Value="5,0,5,0"/>
         <Setter Property="HorizontalContentAlignment" Value="Left"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
@@ -569,13 +569,13 @@
         <Setter Property="OverridesDefaultStyle" Value="true"/>
         <Style.Triggers>
             <Trigger Property="Orientation" Value="Horizontal">
-                <Setter Property="Width" Value="Auto"/>
+                <Setter Property="Width" Value="自动"/>
                 <Setter Property="Height" Value="0" />
                 <Setter Property="Template" Value="{StaticResource HorizontalScrollBar}" />
             </Trigger>
             <Trigger Property="Orientation" Value="Vertical">
                 <Setter Property="Width" Value="0"/>
-                <Setter Property="Height" Value="Auto" />
+                <Setter Property="Height" Value="自动" />
                 <Setter Property="Template" Value="{StaticResource VerticalScrollBar}" />
             </Trigger>
         </Style.Triggers>
@@ -588,12 +588,12 @@
                 <ControlTemplate TargetType="{x:Type ScrollViewer}">
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="自动"/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
                             <RowDefinition/>
-                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="自动"/>
                         </Grid.RowDefinitions>
                         <ScrollContentPresenter Grid.Column="1"/>
                         <ScrollBar Name="PART_VerticalScrollBar" Value="{TemplateBinding VerticalOffset}" Maximum="{TemplateBinding ScrollableHeight}" ViewportSize="{TemplateBinding ViewportHeight}" Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}"
