@@ -113,3 +113,21 @@ If you really like this software, you even can post a review on the devs profile
 **Discord:** https://discord.gg/qfd3eFb
 
 **Website:** https://wfinfo.warframestat.us/
+
+---
+
+## 🌏 简体中文汉化版
+
+This is a **Simplified Chinese localization fork** of WFInfo. All UI strings have been translated to Chinese.
+
+**汉化内容：**
+- 所有界面窗口文字 → 简体中文
+- 对话框、提示消息 → 简体中文
+- 语言设置中请选择 **简体中文**
+- OCR 中文识别（简/繁）原项目已支持，直接可用
+
+**与原版的差异：**
+- 界面文字汉化，功能代码完全不变
+- 可跟随上游更新合并
+
+**仓库地址：** https://github.com/Roguegd/WFinfo
