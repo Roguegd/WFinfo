@@ -1,0 +1,35 @@
+name: Build WFInfo (中文版)
+
+on:
+  push:
+    branches: [ master, main ]
+    paths-ignore:
+      - '**.md'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v2
+
+      - name: Setup NuGet
+        uses: NuGet/setup-nuget@v2
+
+      - name: Restore NuGet packages
+        run: nuget restore WFInfo.sln
+
+      - name: Build (Release)
+        run: msbuild WFInfo.sln /p:Configuration=Release /p:Platform="Any CPU" /p:TargetFramework=net48 /t:Rebuild /v:minimal
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: WFInfo-中文版
+          path: WFInfo/bin/Release/
+          compression-level: 9
